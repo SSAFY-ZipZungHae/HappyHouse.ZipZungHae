@@ -72,8 +72,23 @@
 >   * 등록 & 수정 & 삭제
 
 ## 🎞 페이지 소개 
+#### - 메인페이지 <br/>
+<img width="50%" src="https://imgur.com/Ma7m1P3.png"> <br/>
+#### - 회원가입, 로그인, 비밀번호 찾기 <br/>
+<img width="33%" height="200px" src="https://imgur.com/H610uTA.png"> <img width="33%" height="200px" src="https://imgur.com/NkEdbw7.png"> <img width="33%" height="200px"  src="https://imgur.com/HY7rCRL.png">
+#### - 마이페이지 회원목록<br/>
+<img width="45%" height="250px" src="https://imgur.com/4SrMy55.png"> <img width="45%" height="250px" src="https://imgur.com/ofxmU4r.png">
+#### - 주택 검색 <br/>
+<img width="40%" height="250px" src="https://imgur.com/SnMt8O7.png"> <img width="45%"  height="250px" src="https://imgur.com/AuRsa5P.png">
+#### - 상세보기, 주변 상권 정보 <br/>
+<img width="45%" height="250px" src="https://imgur.com/oPjqgCD.png"> <img width="40%" height="250px" src="https://imgur.com/Yozi2R0.png">
+#### - 코로나 선별진료소, 환경 정보 목록  <br/>
+<img width="45%" height="200px" src="https://imgur.com/O4QbmwW.png"> <img width="40%" height="200px" src="https://imgur.com/EIzMRhv.png">
+#### - 오늘의 뉴스, 공지사항  <br/>
+<img width="45%" height="200px" src="https://imgur.com/njn4fVI.png"> <img width="40%" height="200px" src="https://imgur.com/JajlI0w.png">
+#### - QnA 게시판 <br/>
+<img width="45%" height="300px" src="https://imgur.com/I0bvAy7.png"> <img width="40%" height="300px" src="https://imgur.com/RcQjIJm.png">
 
-<img src="https://imgur.com/Dkd1Bzt">
 
 * ## 👩🏻‍💻👩🏻‍💻 개발자
 > 오도경 [https://github.com/dokyeong10] <br/>
