@@ -4,9 +4,7 @@
 - 삼성청년SW아카데미 - 1학기 HappyHouse 관통 프로젝트(2021 상반기)
 - 공공 데이터를 활용한 주택거래정보 검색 사이트
 
-
-(메인 화면 사진 추가하기)
-
+<img width="80%" src="https://user-images.githubusercontent.com/59682953/122520554-b3f2ea80-d04e-11eb-9de4-8440ed9fb7eb.jpg"/>
 
 ## 📆  프로젝트 기간 & 팀원
 
