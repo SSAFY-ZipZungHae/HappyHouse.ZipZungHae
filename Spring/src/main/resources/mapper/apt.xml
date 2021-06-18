@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.happyhouse.mapper.AptMapper">
+
+
+	<select id="listApt" parameterType="map" resultType="AptDto">
+		
+		select *
+		from housedeal
+		<if test ="word != null and word != ''">
+			where ${key} like concat('%', #{word},'%')
+			order by dealAmount desc
+		</if>
+		<if test="key == '' or word == null">
+				where type = -1
+		</if>
+		
+	</select>
+		<select id="aptSearch" parameterType="map" resultType="AptDto">
+		select h.* , d.*, hi.lat, hi.lng
+		from house h join deal d on h.houseCode = d.houseCode
+		join houseInfo hi on h.houseName = hi.AptName
+		<if test="sido == '' ">
+		</if>
+		<if test="sido != '' ">
+			where h.dong = concat(" ", #{dong}) and h.code = (select dongcode from baseaddress where city=#{sido} and gugun=#{sigugun} and dong=#{dong})
+		</if>
+	</select>
+	
+	<select id="getAptDeal" parameterType="int" resultType="AptDto">
+		select * from housedeal
+		where no = #{no}
+	</select>
+	<select id="listAptarea" parameterType="map" resultType="AptDto">
+	
+		select housedeal.no, housedeal.dong, housedeal.AptName, housedeal.dealAmount, housedeal.buildYear,
+		 housedeal.dealYear, housedeal.dealMonth, housedeal.dealDay, housedeal.area, housedeal.floor, houseinfo.lat, houseinfo.lng
+		from housedeal join houseinfo on housedeal.Code = houseinfo.code and housedeal.AptName =houseinfo.AptName
+		where housedeal.dong = #{dongtext}
+		order by dealAmount desc
+	
+	</select>
+	<select id="houseDetailSearch" parameterType="map" resultType="AptDto">
+		select h.* , d.*, hi.lat, hi.lng
+		from house h join deal d on h.houseCode = d.houseCode
+		join houseInfo hi on h.houseName = hi.AptName
+		where h.houseName like concat('%', #{aptName}, '%')
+	</select>
+	<select id="clicksearch" parameterType="string" resultType="Map">
+		select *
+		from house
+		where dong = #{dong}
+	</select>
+	<!-- 
+	<select id="getTotalCount" parameterType="map" resultType="int">
+		select count(no)
+		from houseinfo
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				where subject like concat('%', #{word}, '%')
+			</if>
+			<if test="key != 'subject'">
+				where ${key} = #{word}
+			</if>
+		</if>
+	</select>
+	
+	<select id="getApt" parameterType="int" resultType="AptDto">
+		select no, dong, AptName, dealAmount, buildYear, dealYear, dealMonth,dealDay,area,floor,jibun,type,rentMoney
+		from houseinfo
+		where no = #{no}
+	</select>
+	 -->
+
+</mapper>

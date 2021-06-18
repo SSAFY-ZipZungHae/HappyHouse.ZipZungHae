@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.happyhouse.mapper.EtcMapper">
+
+	<insert id="commerceRegister" parameterType="commerceDto">
+		insert into commerce (`name`, `categoryLarge`, `categoryMiddle`,
+		`categorySmall`, `city`, `gu`, `dong`, `lat`, `lng`)
+		values
+		(#{name}, #{categoryLarge}, #{categoryMiddle}, #{categorySmall}, #{city},
+		#{gu}, #{dong}, #{lat}, #{lng});
+	</insert>
+
+	<!-- <insert id="envRegister" parameterType="envDto">
+		insert into environment (`name`, `type`, `address`, `lat`, `lng`)
+		values
+		(#{name}, #{type}, #{address}, #{lat}, #{lng});
+	</insert> -->
+	
+	<select id="envSearch" parameterType="map" resultType="EnvDto">
+		select *
+		from environment
+		where address like concat('%', #{gungutext}, '%') 
+	</select>
+	
+	<select id="commerceSearch" parameterType="map"
+		resultType="commerceDto">
+		select c.*
+		from commerce c join housedeal h on c.dong =
+		h.dong
+		where h.no =#{no}
+	</select>
+	<select id="findcomm" parameterType="map" resultType="map">
+		select *
+		from commerce
+		where dong=#{dong};
+	</select>
+	<select id="listcommerce" parameterType="map"
+		resultType="CommerceDto">
+
+		select *
+		from commerce
+		where dong =#{comm}
+
+
+	</select>
+	<!-- <select id="houseSearch" parameterType="map" resultType="HouseDto"> 
+		select h.* , d.*, hi.lat, hi.lng from house h join deal d on h.houseCode 
+		= d.houseCode join houseInfo hi on h.houseName = hi.AptName <if test="city 
+		== '' "> </if> <if test="city != '' "> where h.dong = concat(" ", #{dong}) 
+		and h.code = (select dongcode from baseaddress where city=#{city} and gugun=#{gu} 
+		and dong=#{dong}) </if> </select> <select id="houseDetailSearch" parameterType="map" 
+		resultType="HouseDto"> select h.* , d.*, hi.lat, hi.lng from house h join 
+		deal d on h.houseCode = d.houseCode join houseInfo hi on h.houseName = hi.AptName 
+		where h.houseName like concat('%', #{aptName}, '%') </select> House 정보 DB 
+		세팅 <insert id="aptDealRegister" parameterType="map"> insert into house (`houseName`, 
+		`buildYear`, `dong`, `houseArea`, `jibun`, `code`,`floor`) values (#{houseName}, 
+		#{buildYear}, #{dong}, #{houseArea}, #{jibun}, #{code}, #{floor}); insert 
+		into deal(`houseCode`, `dealYear`, `dealMonth`, `dealDay`, `dealAmount`) 
+		values ( (SELECT LAST_INSERT_ID()), #{dealYear}, #{dealMonth}, #{dealDay}, 
+		#{dealAmount}); </insert> <insert id="aptRentRegister" parameterType="map"> 
+		insert into house (`houseName`, `buildYear`, `dong`, `houseArea`, `jibun`, 
+		`code`,`floor`) values (#{houseName}, #{buildYear}, #{dong}, #{houseArea}, 
+		#{jibun}, #{code}, #{floor}); insert into deal(`houseCode`, `dealYear`, `dealMonth`, 
+		`dealDay`, `depositAmount` , `monthlyAmount`) values ( (SELECT LAST_INSERT_ID()), 
+		#{dealYear}, #{dealMonth}, #{dealDay}, #{depositAmount}, #{monthlyAmount}); 
+		</insert> <insert id="houseDealRegister" parameterType="map"> insert into 
+		house (`houseName`, `buildYear`, `dong`, `houseArea`, `jibun`, `code`,`floor`, 
+		`landArea`) values (#{houseName}, #{buildYear}, #{dong}, #{houseArea}, #{jibun}, 
+		#{code}, #{floor} , #{landArea}); insert into deal(`houseCode`, `dealYear`, 
+		`dealMonth`, `dealDay`, `dealAmount`) values ( (SELECT LAST_INSERT_ID()), 
+		#{dealYear}, #{dealMonth}, #{dealDay}, #{dealAmount}); </insert> <insert 
+		id="houseRentRegister" parameterType="map"> insert into house (`houseName`, 
+		`buildYear`, `dong`, `houseArea`, `jibun`, `code`,`floor`) values (#{houseName}, 
+		#{buildYear}, #{dong}, #{houseArea}, #{jibun}, #{code}, #{floor}); insert 
+		into deal(`houseCode`, `dealYear`, `dealMonth`, `dealDay`, `depositAmount` 
+		, `monthlyAmount`) values ( (SELECT LAST_INSERT_ID()), #{dealYear}, #{dealMonth}, 
+		#{dealDay}, #{depositAmount}, #{monthlyAmount}); </insert> -->
+
+
+</mapper>
