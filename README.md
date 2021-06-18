@@ -1,19 +1,41 @@
-# ZipZungHae
+# ZipZungHae 🏡
 
-삼성청년SW아카데미 - 1학기 HappyHouse 관통 프로젝트(2021 상반기)
+## 💡 프로젝트 개요
+- 삼성청년SW아카데미 - 1학기 HappyHouse 관통 프로젝트(2021 상반기)
+- 공공 데이터를 활용한 주택거래정보 검색 사이트
+
 
 (메인 화면 사진 추가하기)
 
-> 진행기간 (2021.05.20~2021.05.27)
 
-## 개발 도구
+## 📆  프로젝트 기간 & 팀원
+
+- 2021년 1월 18일 - 2021년 5월 27일 (5개월)
+- 오도경(팀장), 이승희(팀원)
+
+## ⚙️ 기술 스택
+<p align="center">
+  <img src="https://img.shields.io/badge/API-Google_Map-red?style=flat">&nbsp  
+  <img src="https://img.shields.io/badge/API-Naver_News-skyblue?style=flat">&nbsp 
+  <img src="https://img.shields.io/badge/Library-Spring_Bootstrap-563D7C?style=flat&logo=bootstrap">&nbsp 
+  <img src="https://img.shields.io/badge/Language-Java_11-007396?style=flat&logo=java&logoColor=white">&nbsp 
+  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=white">&nbsp 
+  <img src="https://img.shields.io/badge/Database-MySql-F80000?style=flat&logo=oracle&logoColor=white">&nbsp 
+  <img src="https://img.shields.io/badge/Framework-Vue-D22128?style=flat&logo=apahce&logoColor=white">&nbsp 
+  <img src="https://img.shields.io/badge/Framework-SpringFramework-6DB33F?style=flat&logo=spring&logoColor=white">&nbsp 
+  <img src="https://img.shields.io/badge/Framework-SpringBoot-6DB33F?style=flat&logo=spring&logoColor=white">&nbsp 
+
+</p>
+
+
+## ⚒ 개발 도구
 
 |도구|버전|설명|
 |:---:|:---:|:---:|
 |STS|3.9.14|Backend+Frontend|
 |VSCode|1.56.2|Frontend|
 
-## 개발 환경
+## 🔧 개발 환경
 
 |환경|버전|설명|
 |:---:|:---:|:---:|
@@ -23,7 +45,7 @@
 |Vue.js|2.6.12|Frontend|
 |Springboot|2.4.6|Backend|
 
-## 기능
+## 🖥 기능
 > * 회원관리
 >   * 회원가입
 >   * 로그인
@@ -50,6 +72,6 @@
 >   * 상세정보 및 답변 등록
 >   * 등록 & 수정 & 삭제
 
-* ## 개발자
+* ## 👩🏻‍💻👩🏻‍💻 개발자
 > 오도경 [https://github.com/dokyeong10] <br/>
 > 이승희 [https://github.com/Seung-hees] <br/>
