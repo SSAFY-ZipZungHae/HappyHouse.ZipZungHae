@@ -1,0 +1,8 @@
+﻿vue-board 폴더에서 npm install 하여 관련 모듈을 설치한 다음 실행
+
+vue-board> npm install
+vue-board> npm run serve
+
+생성된 링크 클릭하여 확인
+
+
