@@ -71,6 +71,10 @@
 >   * 상세정보 및 답변 등록
 >   * 등록 & 수정 & 삭제
 
+## 🎞 페이지 소개 
+
+<img src="https://imgur.com/Dkd1Bzt">
+
 * ## 👩🏻‍💻👩🏻‍💻 개발자
 > 오도경 [https://github.com/dokyeong10] <br/>
 > 이승희 [https://github.com/Seung-hees] <br/>
